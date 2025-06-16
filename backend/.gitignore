@@ -1,0 +1,42 @@
+# ---- Node / React / Express ----
+node_modules/
+npm-debug.log*
+pnpm-lock.yaml
+yarn-error.log
+.env
+.env.*          # .env.local, .env.production, etc.
+dist/
+build/
+
+# ---- Prisma ----
+prisma/.env
+prisma/dev.db
+*.sqlite
+*.db-journal
+.prisma/
+
+# ---- Logs ----
+logs/
+*.log
+*.log.*
+
+# ---- PM2 / Next / Vite cache ----
+.pnpm-debug.log
+.next/
+.vite/
+.cache/
+
+# ---- OS / IDE clutter ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ---- Frontend build artifacts ----
+frontend/build/
+frontend/dist/
+
+# ---- Backend artifacts ----
+backend/coverage/
+backend/src/uploads/
