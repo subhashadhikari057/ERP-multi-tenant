@@ -42,12 +42,44 @@ export const createUser = async (req, res, next) => {
   }
 };
 
-/* ---------- DELETE USER ---------- */
+/* ---------- DELETE USER (Soft Delete) ---------- */
 export const deleteUser = async (req, res, next) => {
   try {
-    const userId = parseInt(req.params.id, 10);
-    await service.deleteUser(req.user, userId);
+    const targetId = parseInt(req.params.id, 10);
+    await service.deleteUser(req.user, targetId);
     res.json({ message: 'User deleted' });
+  } catch (err) {
+    next(err);
+  }
+};
+
+/* ---------- LIST USERS ---------- */
+export const listUsers = async (req, res, next) => {
+  try {
+    const data = await service.listUsers(req.user);
+    res.json(data);
+  } catch (err) {
+    next(err);
+  }
+};
+
+/* ---------- UPDATE USER ---------- */
+export const updateUser = async (req, res, next) => {
+  try {
+    const id = parseInt(req.params.id, 10);
+    const data = await service.updateUser(req.user, id, req.body);
+    res.json(data);
+  } catch (err) {
+    next(err);
+  }
+};
+
+/* ---------- RESTORE USER ---------- */
+export const restoreUser = async (req, res, next) => {
+  try {
+    const id = parseInt(req.params.id, 10);
+    await service.restoreUser(req.user, id);
+    res.json({ message: 'User restored' });
   } catch (err) {
     next(err);
   }

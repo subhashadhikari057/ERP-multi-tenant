@@ -32,5 +32,6 @@ model User {
   tenantId  Int?      // ← made optional
   tenant    Tenant?   @relation(fields: [tenantId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
+  deletedAt DateTime?    // ←  field for soft delete
 }
 
