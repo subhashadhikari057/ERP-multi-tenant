@@ -36,10 +36,10 @@ export default function Navbar() {
           {/* ------------ Logo ------------ */}
           <a href="#home" className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold">N</span>
+              <span className="text-white font-bold">क</span>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              NepalERP
+              कार्यसेतु
             </span>
           </a>
 
