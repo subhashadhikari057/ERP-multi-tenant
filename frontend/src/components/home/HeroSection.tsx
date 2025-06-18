@@ -78,10 +78,15 @@ export default function HeroSection() {
       >
         {/* ========== LEFT ========== */}
         <div className="space-y-8 text-center lg:text-left px-4 sm:px-0">
-          <span className="inline-flex items-center px-4 py-2 rounded-full bg-white shadow text-sm font-medium text-gray-800">
-            <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2 animate-pulse" />
-            Designed for Nepali Businesses
-          </span>
+          <span className="
+  inline-flex items-center px-4 py-2 rounded-full bg-white shadow
+  text-sm font-medium text-gray-800
+  mt-6  /* ⬅️ pushes badge down on very small screens */
+  sm:mt-0  /* ⬅️ resets margin-top to 0 from 640 px upward */
+">
+  <span className="w-2 h-2 bg-indigo-600 rounded-full mr-2 animate-pulse" />
+  Designed for Nepali Businesses
+</span>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight break-words">
   Transform Your{" "}
